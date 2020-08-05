@@ -1,0 +1,5 @@
+GET https://localhost:9310/api/profiles/1
+Accept: application/json
+
+###
+GET https://localhost:9310/api/profiles

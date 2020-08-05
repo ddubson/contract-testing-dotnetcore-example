@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "Development": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "launchUrl": "/api/profiles",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:9310",
+        "PACT_PROVIDER_SHOULD_THROW_404": false
+      }
+    }
+  }
+}
