@@ -1,5 +1,7 @@
 # Contract Testing example in .NET Core 3.1 and C# 8
 
+![.NET Core](https://github.com/ddubson/contract-testing-dotnetcore-example/workflows/.NET%20Core/badge.svg)
+
 Contract testing example with two API consumers and one API provider using PactNET.
 
 Run `ship-it.sh` to create and verify contracts between parties. Take a look for more info on parties
