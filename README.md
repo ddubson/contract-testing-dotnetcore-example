@@ -7,6 +7,8 @@
 
 Contract testing example with two API consumers and one API provider using PactNET.
 
+![](./images/example.png)
+
 Run `ship-it.sh` to create and verify contracts between parties. Take a look for more info on parties
 below in the [Scenario](#scenario) section.
 
