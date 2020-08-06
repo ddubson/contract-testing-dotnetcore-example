@@ -17,6 +17,7 @@ namespace API.Controllers
         {
             public long Id { get; set; }
             public string FirstName { get; set; }
+            public string LastName { get; set; }
         }
 
         [HttpGet("api/profiles")]
@@ -24,6 +25,6 @@ namespace API.Controllers
         
         [HttpGet]
         [Route("api/profiles/{id}")]
-        public Profile GetProfileById(int id) => new Profile { Id = 1L, FirstName = "Jill" };
+        public Profile GetProfileById(int id) => new Profile { Id = 1L, FirstName = "Jill", LastName = "Doe" };
     }
 }

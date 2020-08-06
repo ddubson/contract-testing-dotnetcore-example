@@ -5,12 +5,12 @@ using Xunit;
 
 namespace APIConsumerPact
 {
-    public class Consumer1AddressBookApiContractTests : IClassFixture<Consumer1AddressBookApiPact>
+    public class Consumer2AddressBookApiContractTests : IClassFixture<Consumer2AddressBookApiPact>
     {
         private readonly IMockProviderService _mockProviderService;
         private readonly string _mockProviderServiceBaseUri;
 
-        public Consumer1AddressBookApiContractTests(Consumer1AddressBookApiPact data)
+        public Consumer2AddressBookApiContractTests(Consumer2AddressBookApiPact data)
         {
             _mockProviderService = data.MockProviderService;
             _mockProviderService
@@ -45,7 +45,8 @@ namespace APIConsumerPact
                         new //NOTE: Note the case sensitivity here, the body will be serialised as per the casing defined
                         {
                             id = 1,
-                            firstName = "Jill"
+                            firstName = "Jill",
+                            lastName = "Doe"
                         }
                 }); //NOTE: WillRespondWith call must come last as it will register the interaction
 
@@ -57,6 +58,7 @@ namespace APIConsumerPact
             //Assert
             Assert.Equal(1, result.Id);
             Assert.Equal("Jill", result.FirstName);
+            Assert.Equal("Doe", result.LastName);
 
             //NOTE: Verifies that interactions registered on the mock provider are called at least once
             _mockProviderService.VerifyInteractions(); 

@@ -4,11 +4,11 @@ using PactNet.Mocks.MockHttpService;
 
 namespace APIConsumerPact
 {
-    public class Consumer1AddressBookApiPact : IDisposable
+    public class Consumer2AddressBookApiPact : IDisposable
     {
-        private const string ConsumerName = "Consumer1";
+        private const string ConsumerName = "Consumer2";
         private const string ProviderName = "AddressBook.API";
-
+        
         public IPactBuilder PactBuilder { get; private set; }
         public IMockProviderService MockProviderService { get; private set; }
 
@@ -16,7 +16,7 @@ namespace APIConsumerPact
 
         public string MockProviderServiceBaseUri => $"http://localhost:{MockServerPort.ToString()}";
 
-        public Consumer1AddressBookApiPact()
+        public Consumer2AddressBookApiPact()
         {
             PactBuilder =
                 new PactBuilder(new PactConfig
@@ -29,7 +29,7 @@ namespace APIConsumerPact
                 .ServiceConsumer(ConsumerName)
                 .HasPactWith(ProviderName);
 
-            MockProviderService = PactBuilder.MockService(MockServerPort); //Configure the http mock server
+            MockProviderService = PactBuilder.MockService(MockServerPort);
         }
 
         public void Dispose()
