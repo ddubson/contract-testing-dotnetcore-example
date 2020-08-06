@@ -1,0 +1,12 @@
+pool:
+  vmImage: 'Ubuntu 18.04'
+
+variables:
+  buildConfiguration: ''
+
+steps:
+- script: dotnet restore
+  displayName: 'dotnet restore'
+
+- script: bash ship-it.sh
+  displayName: 'Contract Verify'
