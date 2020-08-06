@@ -3,6 +3,7 @@
 ![.NET Core](https://github.com/ddubson/contract-testing-dotnetcore-example/workflows/.NET%20Core/badge.svg)
 [![Build Status](https://travis-ci.org/ddubson/contract-testing-dotnetcore-example.svg?branch=main)](https://travis-ci.org/ddubson/contract-testing-dotnetcore-example)
 [![Build Status](https://dev.azure.com/ddubson0133/contract-testing-dotnetcore-example/_apis/build/status/ddubson.contract-testing-dotnetcore-example?branchName=main)](https://dev.azure.com/ddubson0133/contract-testing-dotnetcore-example/_build/latest?definitionId=2&branchName=main)
+[![Maintainability](https://api.codeclimate.com/v1/badges/90e00e40f61b82d846cd/maintainability)](https://codeclimate.com/github/ddubson/contract-testing-dotnetcore-example/maintainability)
 
 Contract testing example with two API consumers and one API provider using PactNET.
 
