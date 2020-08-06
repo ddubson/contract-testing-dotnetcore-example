@@ -1,6 +1,7 @@
 # Contract Testing example in .NET Core 3.1 and C# 8
 
 ![.NET Core](https://github.com/ddubson/contract-testing-dotnetcore-example/workflows/.NET%20Core/badge.svg)
+[![Build Status](https://dev.azure.com/ddubson0133/contract-testing-dotnetcore-example/_apis/build/status/ddubson.contract-testing-dotnetcore-example?branchName=main)](https://dev.azure.com/ddubson0133/contract-testing-dotnetcore-example/_build/latest?definitionId=2&branchName=main)
 
 Contract testing example with two API consumers and one API provider using PactNET.
 
