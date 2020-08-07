@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using API.Domain;
+using API.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace API.Controllers
@@ -7,24 +10,27 @@ namespace API.Controllers
     public class ProfileController : ControllerBase
     {
         private readonly ILogger<ProfileController> _logger;
+        private readonly PersonProfileRepository _personProfileRepository;
 
-        public ProfileController(ILogger<ProfileController> logger)
+        public ProfileController(ILogger<ProfileController> logger, PersonProfileRepository personProfileRepository)
         {
             _logger = logger;
-        }
-
-        public class Profile
-        {
-            public long Id { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
+            _personProfileRepository = personProfileRepository;
         }
 
         [HttpGet("api/profiles")]
-        public Profile GetProfiles() => new Profile { Id = 1L, FirstName = "Jill" };
-        
+        public IEnumerable<PersonProfile> GetProfiles()
+        {
+            _logger.LogInformation("Fetched all profiles.");
+            return _personProfileRepository.FetchAll();
+        }
+
         [HttpGet]
         [Route("api/profiles/{id}")]
-        public Profile GetProfileById(int id) => new Profile { Id = 1L, FirstName = "Jill", LastName = "Doe" };
+        public PersonProfile GetProfileById(int id)
+        {
+            _logger.LogInformation("Fetched all profiles.");
+            return _personProfileRepository.FindById(id);
+        }
     }
 }
