@@ -1,4 +1,4 @@
-# 📜 Contract Testing example in .NET Core 3.1 and C# 8
+# 📜 Contract Testing example in .NET 5 and C# 8
 
 ![.NET Core](https://github.com/ddubson/contract-testing-dotnetcore-example/workflows/.NET%20Core/badge.svg)
 [![Build Status](https://travis-ci.org/ddubson/contract-testing-dotnetcore-example.svg?branch=main)](https://travis-ci.org/ddubson/contract-testing-dotnetcore-example)
